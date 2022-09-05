@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   overflow: hidden;
@@ -5,8 +9,56 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  font-family: Helvetica, sans-serif;
-  font-weight: lighter;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.qr {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr canvas {
+  flex-grow: 1;
+}
+
+.qr input[type="text"] {
+  width: 100%;
+  height: 7rem;
+  font-size: 3.5rem;
+  padding: 2rem 2rem;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+  border-top: 3px solid #ddd;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  transition: all 0.2s linear;
+}
+
+.qr button {
+  background-color: #000;
+  color: white;
+  width: 100%;
+  font-size: 4rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.qr button.input-error {
+  background-color: #ddd;
+  cursor: not-allowed;
 }
